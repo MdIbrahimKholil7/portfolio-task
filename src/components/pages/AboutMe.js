@@ -1,3 +1,4 @@
+import { ChevronLeftIcon, DocumentIcon } from '@heroicons/react/solid';
 import React from 'react';
 import img from '../../assets/img3.jpg'
 const AboutMe = () => {
@@ -21,7 +22,7 @@ const AboutMe = () => {
                                             <div className='w-[7px] h-[7px] rounded-full bg-white'></div>
                                         </div>
                                         <div>
-                                            <p>About Me</p>
+                                            <p className='text-[17px]'> About Me</p>
                                         </div>
                                     </div>
                                 </div>
@@ -35,7 +36,7 @@ const AboutMe = () => {
 
                                         <p className='mt-3'> Also, I am a big fan of Ansible, Jenkins, chef . I use them for making my workflow faster and reliable.</p>
                                     </article>
-                                    <div className='grid md:grid-cols-2 grid-cols-1 md:gap-7 gap-4'>
+                                    <div className='grid md:grid-cols-2 grid-cols-1 md:gap-7 gap-4 border_bottom'>
                                         <div>
                                             <div className='mb-2'>
                                                 <p>harrison_p@example.com</p>
@@ -65,8 +66,33 @@ const AboutMe = () => {
                                             </div>
                                         </div>
                                     </div>
+                                    <div className='flex items-center justify-center mt-8'>
+                                        <button
+                                            className='hire_btn rounded-full uppercase font-bold inline-block mr-7'
+                                        >
+                                            <span>
+                                                <ChevronLeftIcon
+                                                    className='w-[20px]'
+                                                />
+                                            </span>
+                                            Hire Me
+                                        </button>
+                                        <button
+                                            className='resume_btn font-bold rounded-full'
+                                        >
+                                            <span>
+                                                <DocumentIcon
+                                                    className='w-[20px]'
+                                                />
+                                            </span>
+                                            Download Resume
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
+
+
+
                         </div>
                     </div>
                 </div>

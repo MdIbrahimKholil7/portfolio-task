@@ -28,5 +28,56 @@
   width: 15%;
 }
 .border_bottom{
-  border-bottom: 0.7px solid gray;
+  border-bottom: 0.7px solid rgb(178, 174, 174);
+}
+/* btn design  */
+.hire_btn{
+  background: #458fd0;
+  color: white;
+  padding: 9px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #458fd0;
+  transition: .3s ease;
+}
+.hire_btn:hover{
+  background: #fff;
+  color: #458fd0;
+  border: 1px solid #458fd0;
+}
+.resume_btn{
+  background: white;
+  color: #458fd0;
+  padding: 10px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #458fd0;
+  position: relative;
+  overflow: hidden  ;
+  transition: .3s ease;
+  z-index: 1;
+  /* display: inline-block; */
+}
+.resume_btn::after{
+  content:"";
+  position:absolute;
+  top: 0;
+  left:0;
+  width:100%;
+  height: 100%;
+  background: #458fd0;
+  transform: translateX(-105%);
+  border-radius: .5rem;
+  transition:0.5s all;
+}
+.resume_btn:hover{
+  color: #fff;
+  /* z-index: 21; */
+}
+.resume_btn:hover:after{
+  transform: translateX(0);
+  color: #fff;
+  z-index: -1;
 }
