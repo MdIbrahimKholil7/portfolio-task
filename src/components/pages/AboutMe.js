@@ -2,16 +2,18 @@ import React from 'react';
 import img from '../../assets/img3.jpg'
 const AboutMe = () => {
     return (
-        <div >
+        <div className='max-w-[1008px] mx-auto'>
             <div>
-                <div className='text-center mt-20 inline-block w-full bottom-border relative'>
-                    <h3 className='text-[18px] uppercase'> Introduction</h3>
-                    <h1 className='text-4xl uppercase dark:text-[#458fd0] font-bold '>About <span className='text-[#458fd0] dark:text-white'>Me</span></h1>
+                <div className='text-center mt-20 inline-block w-full bottom-border relative mb-10 lg:mb-0'>
+                    <h3 className='md:text-[18px] text-[15px] uppercase'> Introduction</h3>
+                    <h1 className='lg:text-4xl md:text-3xl  text-2xl uppercase dark:text-[#458fd0] font-bold '>About <span className='text-[#458fd0] dark:text-white'>Me</span></h1>
                 </div>
                 <div class="hero min-h-screen">
                     <div class="hero-content items-start flex-col justify-between w-full lg:flex-row-reverse">
-                        <img src={img} class="lg:max-w-[317px]max-w-[300px] sm:max-w-[440px] h-auto lg:h-[346px] object-cover border-solid border-[8px] border-[#458fd0] rounded-lg  shadow-2xl " alt='img' />
-                        <div className='w-full text-white '>
+
+                        <img src={img} class="lg:max-w-[317px]max-w-[300px] sm:max-w-[440px] h-auto lg:h-[346px] object-cover border-solid border-[8px] border-[#458fd0] rounded-lg  shadow-2xl mx-auto" alt='img' />
+
+                        <div className='w-full text-white mt-9 lg:mt-0'>
                             <div className='w-full text-white '>
                                 <div>
                                     <div className='flex justify-between items-center py-3 px-2 bg-[#458fd0] w-full'>
@@ -25,40 +27,40 @@ const AboutMe = () => {
                                 </div>
                             </div>
                             {/* description  */}
-                            <div className='mt-5 text-right px-5 text-black'>
+                            <div className='mt-5 text-right px-5 text-black dark:text-white'>
                                 <div >
-                                    <p className='uppercase font-bold my-3 text-black text-xl'><span className='text-[#458fd0]'>Hello!</span> My Name is Ariful Islam</p>
+                                    <p className='uppercase font-bold my-3 text-black dark:text-white lg:text-xl md:text-[18px] text-[16px]'><span className='text-[#458fd0]'>Hello!</span> My Name is Ariful Islam</p>
                                     <article className='border_bottom pb-4 mb-3'>
                                         Hi, I am passionate to work with any type of cloud infrastructure. My main focus is aws architecture. Build system for various kind of web application or website. Deployment, automation, auto calling, cloudformation , opsworks and beanstack is my key.
 
                                         <p className='mt-3'> Also, I am a big fan of Ansible, Jenkins, chef . I use them for making my workflow faster and reliable.</p>
                                     </article>
-                                    <div className='grid grid-cols-2 gap-7'>
+                                    <div className='grid md:grid-cols-2 grid-cols-1 md:gap-7 gap-4'>
                                         <div>
                                             <div className='mb-2'>
                                                 <p>harrison_p@example.com</p>
-                                                <strong>Email</strong>
+                                                <strong>Email :</strong>
                                             </div>
                                             <div className='mb-2'>
                                                 <p>8801723004411</p>
-                                                <strong>Phone :</strong>
+                                                <strong>Phone : </strong>
                                             </div>
                                             <div className='mb-2'>
-                                                <strong>From :</strong>
+                                                <strong>From : </strong>
                                                 <span>BD,Chuadanga</span>
                                             </div>
                                         </div>
                                         <div>
                                             <div className='mb-2'>
-                                                <strong>Name :</strong>
+                                                <strong>Name : </strong>
                                                 <span>Ariful Islam</span>
                                             </div>
                                             <div className='mb-2'>
-                                                <strong>Age :</strong>
+                                                <strong>Age : </strong>
                                                 <span>25</span>
                                             </div>
                                             <div className='mb-2'>
-                                                <strong>Job :</strong>
+                                                <strong>Job : </strong>
                                                 <span>AWS Developer</span>
                                             </div>
                                         </div>

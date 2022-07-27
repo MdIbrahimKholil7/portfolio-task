@@ -5,7 +5,7 @@ import SideBar from '../pages/SideBar';
 const Home = () => {
 
     return (
-        <div>
+        <div >
             <div>
                 <MobileNav />
             </div>
