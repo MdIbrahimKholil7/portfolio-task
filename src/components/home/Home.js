@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
 import AboutMe from '../pages/AboutMe';
+import MobileNav from '../pages/MobileNav';
 import SideBar from '../pages/SideBar';
 const Home = () => {
-    const [open, setOpen] = useState(true)
+
     return (
         <div>
-            <button onClick={() => setOpen(!open)}>Toggle</button>
+            <div>
+                <MobileNav />
+            </div>
             <div className='flex justify-between items-center'>
-                <div className='px-5 w-full'>
+                <div className=' w-full'>
                     <AboutMe />
-
                 </div>
-                <SideBar
-                    open={open}
-                />
+                <SideBar />
             </div>
         </div>
     );

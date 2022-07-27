@@ -5,3 +5,28 @@
 .li-style{
   border-bottom: 1px solid #212529;
 }
+.nav-border{
+  border-bottom: 1.3px solid rgb(152, 145, 145);
+}
+
+/* for mobile nav baground  */
+.nav-bg{
+  background-color: rgba(69, 143, 208, .87)
+}
+.nav-z{
+  z-index: 1200px !important;
+}
+
+/* About me border bottom style  */
+.bottom-border::before{
+  content:'';
+  position: absolute;
+  bottom: -15px;
+  transform: translate(-50%,-50%);
+  background: #458fd0;
+  height: 2px;
+  width: 15%;
+}
+.border_bottom{
+  border-bottom: 1px solid gray;
+}
