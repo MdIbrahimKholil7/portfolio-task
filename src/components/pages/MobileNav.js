@@ -15,26 +15,26 @@ const MobileNav = () => {
         openNav: {
             y: '-0.8vh',
             opacity: 0.7,
-            x:'0',
-            transition:{
-                duration:0.4,
-                height:'70vh'
+            x: '0',
+            transition: {
+                duration: 0.4,
+                height: '70vh'
             },
-            
+
         },
         closeNav: {
             y: '-160vh',
             opacity: 0,
-            transition:{
-                duration:0.5
+            transition: {
+                duration: 0.5
             },
-            height:0
+            height: 0
         }
     }
     useEffect(() => {
-
         document.body.className = dark
-      }, [dark])
+    }, [dark])
+
     const themeHandler = () => {
         if (dark === 'light') {
             setDark('dark')
@@ -50,7 +50,7 @@ const MobileNav = () => {
     }
     return (
         <div className='lg:hidden nav-z block mb-[61px] w-full'>
-            <div className='fixed top-0 left-0 w-full'>
+            <div className='fixed top-0 left-0 w-full z-[999]'>
                 <div className='flex justify-between items-center w-[100vw] bg-white dark:bg-slate-800 py-4 nav-border px-5'>
                     <div onClick={() => setOpenMenu(!openMenu)} className='cursor-pointer text-[#458fd0]' >
                         {
@@ -71,11 +71,10 @@ const MobileNav = () => {
                     /*  variants={openVariants}
                      animate={openMenu ? 'openNav' : 'closeNav'} */
                     className=" mt-1 ">
-                    <motion.ul 
-                    variants={openVariants}
-                    animate={openMenu ? 'openNav' : 'closeNav'}
-                   
-                    className=" h-[70vh] w-full z-[-777px]  nav-bg py-20" >
+                    <motion.ul
+                        variants={openVariants}
+                        animate={openMenu ? 'openNav' : 'closeNav'}
+                        className=" h-[70vh] w-full z-[-777]  nav-bg py-20" >
                         <li className="flex  dark:text-white dark:border-b-white mt-5 pb-3 text-white font-bold text-[18px] li-style justify-center items-center">
                             Home
                             <span className="ml-2">
