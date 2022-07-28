@@ -68,7 +68,7 @@ const AboutMe = () => {
                                     </div>
                                     <div className='flex items-center justify-center md:flex-row flex-col mt-8'>
                                         <button
-                                            className='hire_btn rounded-full uppercase font-bold inline-block md:mr-7 mb-5 md:mb-0'
+                                            className='hire_btn rounded-full uppercase font-bold inline-block md:mr-7 mb-5 md:mb-0 md:px-[14px] xl:px-[20px] px-[20px] py-[5px]'
                                         >
                                             <span>
                                                 <ChevronLeftIcon
@@ -78,7 +78,7 @@ const AboutMe = () => {
                                             Hire Me
                                         </button>
                                         <button
-                                            className='resume_btn font-bold rounded-full'
+                                            className='resume_btn font-bold rounded-full md:px-[14px] xl:px-[20px] px-[20px] py-[5px]'
                                         >
                                             <span>
                                                 <DocumentIcon

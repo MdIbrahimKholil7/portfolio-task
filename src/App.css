@@ -34,7 +34,7 @@
 .hire_btn{
   background: #458fd0;
   color: white;
-  padding: 9px 22px;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -49,7 +49,7 @@
 .resume_btn{
   background: white;
   color: #458fd0;
-  padding: 10px 22px;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -89,4 +89,48 @@
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
+}
+
+
+/* service card hover effect  */
+
+.service-card {
+  display: block;
+  position: relative;
+  border-radius: 4px;
+  text-decoration: none;
+  z-index: 0;
+  overflow: hidden;
+  transition: .3s ease;
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -16px;
+  right: -16px;
+  background: #458fd0;
+  height: 40px;
+  width: 40px;
+  color: #fff;
+  border-radius: 32px;
+  transform: scale(1);
+  transform-origin: 50% 50%;
+  transition: transform .5s ease-out;
+}
+
+.service-card:hover::before {
+  transform: scale(35);
+  
+}
+
+.service-card:hover {
+  margin-top: 60px;
+}
+.service-card:hover h3{
+ color:#fff !important;
+}
+.service-card:hover button{
+ color:#fff !important;
 }

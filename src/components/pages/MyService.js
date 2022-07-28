@@ -63,16 +63,18 @@ const MyService = () => {
                 </div>
             </div>
 
-            <div
-                className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:gap-4 md:gap-6 gap-3 px-5 py-20 '
-            >
-                {/* service card  */}
-                {
-                    services.map((service, index) => <MyServiceCard
-                        key={index}
-                        service={service}
-                    />)
-                }
+            <div className='max-w-[1008px] mx-auto'>
+                <div
+                    className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:gap-4 md:gap-6 gap-3 px-5 lg:py-20 py-10'
+                >
+                    {/* service card  */}
+                    {
+                        services.map((service, index) => <MyServiceCard
+                            key={index}
+                            service={service}
+                        />)
+                    }
+                </div>
             </div>
 
         </div>

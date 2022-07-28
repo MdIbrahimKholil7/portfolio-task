@@ -20,18 +20,18 @@ const MyServiceCard = ({ service }) => {
         setOpen(false)
     }
 
-    const btn = <button className='text-[#458fd0]' onClick={handleDesc}>... See more</button>
+    const btn = <button className='text-[#458fd0] hover:text-white' onClick={handleDesc}>... See more</button>
     const showMoreBtn = details.length > 69 && btn
 
 
     return (
         <div
-        className='flex justify-center items-center'
+            className='flex justify-center items-start  relative'
         >
             <div
 
                 className='lg:max-w-[270px] md:max-w-[300px] max-w-[300px]
-                        shadow-xl p-3 rounded-lg bg-white lg:mt-20 
+                        shadow-xl p-3 rounded-lg bg-white hover:text-white lg:mt-20 service-card 
                          '
             >
                 <div
@@ -49,14 +49,14 @@ const MyServiceCard = ({ service }) => {
                     >
                         {title}
                     </h3>
-                    <article className='leading-7 text-[#575757]'>
+                    <article className='leading-7 hover:text-white text-[#575757]'>
                         {
                             desc
                         }
                         <>
-                            <span className='ml-1'>
+                            <span className='ml-1 block'>
                                 {
-                                    open ? <button className='text-[#458fd0]' onClick={handleShowLess}>ShowLess</button> : showMoreBtn
+                                    open ? <button className='text-[#458fd0] hover:text-white' onClick={handleShowLess}>ShowLess</button> : showMoreBtn
                                 }
                             </span>
                         </>
