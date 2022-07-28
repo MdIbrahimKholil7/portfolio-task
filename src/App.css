@@ -81,3 +81,12 @@
   color: #fff;
   z-index: -1;
 }
+
+/* sevices bg image  */
+.services{
+  background-image: url('./assets/bg4.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}

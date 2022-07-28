@@ -83,7 +83,7 @@ const SideBar = () => {
                 variants={sidebarVariants}
                 animate={open ? "sidebarOpen" : "sidebarClosed"}
 
-                className='ml-5'
+                className='ml-0'
             >
                 <motion.div className='fixed top-[0] w-[260px] right-0' variants={LinkBoxVariants}
 

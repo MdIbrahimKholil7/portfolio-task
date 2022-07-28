@@ -66,9 +66,9 @@ const AboutMe = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className='flex items-center justify-center mt-8'>
+                                    <div className='flex items-center justify-center md:flex-row flex-col mt-8'>
                                         <button
-                                            className='hire_btn rounded-full uppercase font-bold inline-block mr-7'
+                                            className='hire_btn rounded-full uppercase font-bold inline-block md:mr-7 mb-5 md:mb-0'
                                         >
                                             <span>
                                                 <ChevronLeftIcon
