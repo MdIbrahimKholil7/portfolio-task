@@ -50,7 +50,7 @@ const MyServiceCard = ({ service }) => {
                         >
                             {title}
                         </h3>
-                        <article className='leading-7 article dark:text-white hover:text-white text-[#575757]'>
+                        <article className='leading-7 article dark:text-white hover:text-white text-[#575757] '>
                             {
                                 desc
                             }
