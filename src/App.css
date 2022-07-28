@@ -101,7 +101,7 @@
   text-decoration: none;
   z-index: 0;
   overflow: hidden;
-  transition: .3s ease;
+  transition: .5s ease;
 }
 
 .service-card::before {
@@ -133,4 +133,7 @@
 }
 .service-card:hover button{
  color:#fff !important;
+}
+.card-hover:hover article{
+  color: #fff;
 }
