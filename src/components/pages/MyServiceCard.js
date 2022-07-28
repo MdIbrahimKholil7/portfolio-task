@@ -32,7 +32,7 @@ const MyServiceCard = ({ service }) => {
                 <div
 
                     className='lg:max-w-[270px] md:max-w-[300px] max-w-[300px]
-        shadow-xl p-3 rounded-lg bg-white hover:text-white lg:mt-20 service-card 
+        shadow-xl p-3 rounded-lg bg-white dark:bg-slate-700  hover:text-white lg:mt-20 service-card 
          '
                 >
                     <div
@@ -50,7 +50,7 @@ const MyServiceCard = ({ service }) => {
                         >
                             {title}
                         </h3>
-                        <article className='leading-7 article hover:text-white text-[#575757]'>
+                        <article className='leading-7 article dark:text-white hover:text-white text-[#575757]'>
                             {
                                 desc
                             }

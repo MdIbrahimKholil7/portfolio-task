@@ -57,8 +57,8 @@ const MyService = () => {
         <div className='services min-h-screen bg-red-400 mt-20' >
             <div>
                 <div className='text-center mt-20 inline-block w-full bottom-border relative mb-10 lg:mb-0'>
-                    <h3 className='md:text-[18px] text-[15px] uppercase'> My Services</h3>
-                    <h1 className='lg:text-4xl md:text-3xl  text-2xl uppercase dark:text-[#458fd0] font-bold '>My <span className='text-[#458fd0] dark:text-white'>Services</span></h1>
+                    <h3 className='md:text-[18px] dark:text-slate-500 text-[15px] uppercase'> My Services</h3>
+                    <h1 className='lg:text-4xl md:text-3xl  text-2xl uppercase dark:text-[#458fd0] font-bold '>My <span className='text-[#458fd0] dark:text-slate-700'>Services</span></h1>
 
                 </div>
             </div>
