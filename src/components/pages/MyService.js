@@ -96,6 +96,9 @@ const MyService = () => {
                     <h1 className='lg:text-4xl md:text-3xl  text-2xl uppercase dark:text-[#458fd0] font-bold '>My <span className='text-[#458fd0] dark:text-slate-700'>Services</span></h1>
 
                 </div>
+                <div>
+                    <img src="http://lorempixel.com/640/480/city?66852" alt="" />
+                </div>
             </motion.div>
 
             <motion.div
