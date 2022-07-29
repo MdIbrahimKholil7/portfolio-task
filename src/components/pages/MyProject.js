@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import VisibilitySensor from 'react-visibility-sensor';
+import React, { useEffect, useState } from 'react';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import img1 from '../../assets/images/img1.jpg'
 import img2 from '../../assets/images/img2.jpg'
 import img3 from '../../assets/images/img3.jpg'
@@ -13,6 +13,37 @@ import Modal from './Modal';
 import MyProjectCard from './MyProjectCard';
 const MyProject = () => {
     const [openModal, setOpenModal] = useState(null)
+
+    const { ref, inView } = useInView({
+        threshold:0.3
+    })
+    const animation = useAnimation()
+    const [animateCount, setAnimateCount] = useState(0)
+    useEffect(() => {
+        setAnimateCount(animateCount + 1)
+        if (animateCount <= 1) {
+            if (inView) {
+                animation.start({
+                    x: 0,
+                    transition: {
+                        delay: 0.6,
+                        type: 'spring',
+                        stiffness: 120,
+                        duration: .3,
+                        ease: 'easeInOut'
+
+                    },
+                    opacity: 1
+                })
+            }
+            if (!inView) {
+                animation.start({
+                    x: 1000,
+                    opacity: 0
+                })
+            }
+        }
+    }, [inView])
     const projects = [
         {
             img: img1,
@@ -43,72 +74,55 @@ const MyProject = () => {
             title: 'Car Studio'
         },
         {
-            img: img7,
+            img: img8,
             title: 'Design Blast'
         },
     ]
-    const projectTitlevariants = {
-        open: {
-            x: 0,
-            transiton: {
-                duration: 0.3
-            }
-        },
-        out: {
-            x: 1000
-        }
-    }
     const [projectLength, setProjectLength] = useState(projects.length)
-    const [imgIndex, setImgIndex] = useState(0)
+
     return (
-        <VisibilitySensor
 
-        >
-            <div
-                variants={projectTitlevariants}
-                initial='out'
-                animate='open'
-                className='max-w-[1386px] mx-auto px-5'>
-                <div>
-                    <VisibilitySensor
-                    >
-                        {
-                            ({ isVisible }) => <motion.div>
-                                    <div className='text-center mt-20 inline-block w-full bottom-border relative mb-10 lg:mb-0'>
-                                        <h3 className='md:text-[18px] text-[15px] uppercase'>Best Of My</h3>
-                                        <h1 className='lg:text-4xl md:text-3xl  text-2xl uppercase dark:text-[#458fd0] font-bold '>New <span className='text-[#458fd0] dark:text-white'>Projects</span></h1>
-                                    </div>
-                                </motion.div>
-                            
-                        }
-                    </VisibilitySensor>
-                    <div className='md:mt-20 mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:gap-4 gap-6 lg:gap-0 xl:gap-6'>
-                        {
-                            projects.map((project, index) => <div
-                                key={index}
-                                onClick={() => setOpenModal(index)}
-                            >
-                                <MyProjectCard
-                                    project={project}
-                                />
-                            </div>
+        <div
+            ref={ref}
+            className='max-w-[1386px] mx-auto px-5 overflow-x-hidden'>
+            <div>
 
-                            )
-                        }
+                <motion.div 
+                animate={animation}
+                >
+                    <div className='text-center mt-20 inline-block w-full bottom-border relative mb-10 lg:mb-0'>
+                        <h3 className='md:text-[18px] text-[15px] uppercase'>Best Of My</h3>
+                        <h1 className='lg:text-4xl md:text-3xl  text-2xl uppercase dark:text-[#458fd0] font-bold '>New <span className='text-[#458fd0] dark:text-white'>Projects</span></h1>
                     </div>
-                </div>
+                </motion.div>
 
-                {
-                    typeof openModal === 'number' && <Modal
-                        openModal={openModal}
-                        setOpenModal={setOpenModal}
-                        projectLength={projectLength}
-                        setProjectLength={setProjectLength}
-                        projects={projects}
-                    />
-                }
+                <div className='md:mt-20 mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:gap-4 gap-6 lg:gap-0 xl:gap-6'>
+                    {
+                        projects.map((project, index) => <div
+                            key={index}
+                            onClick={() => setOpenModal(index)}
+                        >
+                            <MyProjectCard
+                                project={project}
+                            />
+                        </div>
+
+                        )
+                    }
+                </div>
             </div>
-        </VisibilitySensor>
+
+            {
+                typeof openModal === 'number' && <Modal
+                    openModal={openModal}
+                    setOpenModal={setOpenModal}
+                    projectLength={projectLength}
+                    setProjectLength={setProjectLength}
+                    projects={projects}
+                />
+            }
+        </div>
+
     );
 };
 

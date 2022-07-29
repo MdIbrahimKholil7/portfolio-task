@@ -5,7 +5,6 @@ import { BiLeftArrow } from 'react-icons/bi';
 import {motion} from 'framer-motion'
 const Modal = ({ openModal, setOpenModal, projects, projectLength }) => {
     const { img } = projects[openModal] || {}
-    console.log(img)
     const handleDecrease = (item) => {
         if (openModal === 'increase') {
             if (openModal >= projectLength - 1) {
