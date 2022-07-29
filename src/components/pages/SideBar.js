@@ -12,7 +12,7 @@ const sidebarVariants = {
     sidebarOpen: {
         width: "260px",
         transition: {
-            when: "beforeChildren",
+            // when: "beforeChildren",
             delay: 0.1,
 
         },
@@ -33,7 +33,7 @@ const LinkBoxVariants = {
         x: '0',
         opacity: 1,
         transition: {
-            delay: 0.1,
+            // delay: 0.1,
             type: 'tween'
         }
     },

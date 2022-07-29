@@ -6,7 +6,6 @@ import MobileNav from '../pages/MobileNav';
 import MyProject from '../pages/MyProject';
 import MyService from '../pages/MyService';
 import MySkills from '../pages/MySkills';
-import ProductTestimonial from '../pages/ProductTestimonial';
 import SideBar from '../pages/SideBar';
 import Testimonials from '../pages/Testimonials';
 const Home = () => {
@@ -27,7 +26,7 @@ const Home = () => {
                     />
                     <Testimonials />
                     <Contact />
-                    {/* <ProductTestimonial/> */}
+                 
                     <Footer/>
                 </div>
                 <SideBar 

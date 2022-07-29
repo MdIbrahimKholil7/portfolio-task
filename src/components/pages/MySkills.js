@@ -51,7 +51,7 @@ const MySkills = ({ progress }) => {
             </div>
             {
                 inView && <div className="container dark:bg-slate-800 mx-auto mb-[200]">
-                    <div cla className='mb-7' ssName='mb-7'>
+                    <div cla className='mb-7'>
                         <div className="progress md:w-[140px] md:h-[140px] w-[100px] h-[100px] text-[16px]  relative dark:bg-slate-800">
                             <span className="title timer " data-from="0" data-to="95" data-speed="1800">90%</span>
                             <div className={`${progress ? 'dark' : 'overlay'}`}></div>

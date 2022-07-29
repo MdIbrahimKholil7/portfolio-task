@@ -1,28 +1,27 @@
+import React, {Suspense } from 'react'
 import './App.css';
-import {Routes,Route} from 'react-router-dom'
-import Home from './components/home/Home';
+import { Routes, Route } from 'react-router-dom'
+// import Home from './components/home/Home';
+import loader from './assets/829.gif'
 function App() {
+  const Home = React.lazy(() => import('./components/home/Home'));
 
-  
-  /*  
-   const [dark, setDark] = useState('light')
-   useEffect(() => {
-     document.body.className = dark
-   }, [dark])
- 
-   const setHandle = () => {
-     if (dark === 'light') {
-       setDark('dark')
-     } else {
-       setDark('light')
-     }
-     localStorage.setItem('theme', JSON.stringify({theme:dark}))
-   } */
   return (
     <div className="App dark:bg-slate-800 dark:text-white relative">
-     <Routes>
-        <Route path='/' element={<Home/>}/>
-     </Routes>
+      <Routes>
+        <Route path='/' element={
+          <Suspense
+          fallback={<div
+          className='flex justify-center items-center
+          h-[100vh]
+          '
+          >
+            <img className='w-[100px]' src={loader} alt='loader'/>
+          </div>}
+          >
+            <Home />
+          </Suspense>} />
+      </Routes>
     </div>
   );
 }
