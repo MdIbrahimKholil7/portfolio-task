@@ -66,16 +66,20 @@ const imgVariants = {
 
 const SideBar = ({ progress, setProgress }) => {
     const [open, setOpen] = useState(true)
+    const theme=JSON.parse(localStorage.getItem('theme'))
+    console.log(theme)
     const [rotate, setRotate] = useState(false)
-    const [dark, setDark] = useState('light')
+    const [dark, setDark] = useState(theme?.theme || 'light')
     useEffect(() => {
         document.body.className = dark
     }, [dark])
+   
 
     // sidebar toggler 
     const handleToggler = () => {
         setOpen(!open)
     }
+    console.log(progress)
     const themeHandler = () => {
         setProgress(!progress)
         if (dark === 'light') {
@@ -83,7 +87,8 @@ const SideBar = ({ progress, setProgress }) => {
         } else {
             setDark('light')
         }
-        // localStorage.setItem('theme', JSON.stringify({ theme: dark }))
+        localStorage.setItem('theme', JSON.stringify({ theme: dark }))
+        // localStorage.setItem('skill', JSON.stringify({ skill: !progress }))
     }
     return (
         <div className="lg:block hidden">

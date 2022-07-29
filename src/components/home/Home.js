@@ -10,7 +10,8 @@ import ProductTestimonial from '../pages/ProductTestimonial';
 import SideBar from '../pages/SideBar';
 import Testimonials from '../pages/Testimonials';
 const Home = () => {
-    const [progress,setProgress]=useState(false)
+    const skill=JSON.parse(localStorage.getItem('skill'))
+    const [progress,setProgress]=useState(skill?.skill || false)
     return (
         <div >
             <div>
