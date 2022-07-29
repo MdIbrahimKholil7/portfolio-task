@@ -16,20 +16,20 @@ const Footer = () => {
         <div className=' footer-img h-[350px] text-[18px] relative'>
 
             <div>
-                <div className='flex justify-between items-center w-[20%]  mx-auto  absolute top-14 left-[40%]'>
+                <div className='flex justify-between items-center sm:w-[50%] md:w-[20%] mx-auto absolute gap-3 top-14 md:left-[40%] sm:left-[26%] w-[80%] left-[10%]'>
                     <div className='bg-[#458fd0] p-3 rounded-full'>
                         <BsFacebook
-                            className='text-white text-3xl'
+                            className='text-white sm:text-3xl text-xl'
                         />
                     </div>
                     <div className='bg-[#458fd0] p-3 rounded-full'>
                         <BsGithub
-                            className='text-white text-3xl'
+                            className='text-white sm:text-3xl text-xl'
                         />
                     </div>
                     <div className='bg-[#458fd0] p-3 rounded-full'>
                         <BsLinkedin
-                            className='text-white text-3xl'
+                            className='text-white sm:text-3xl text-xl'
                         />
                     </div>
                 </div>
