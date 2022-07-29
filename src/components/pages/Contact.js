@@ -1,7 +1,19 @@
-import { DocumentIcon, PaperAirplaneIcon } from '@heroicons/react/solid';
 import React from 'react';
-
+import { PaperAirplaneIcon } from '@heroicons/react/solid';
+import emailjs from 'email-js'
 const Contact = () => {
+
+    const handleSubmit=e=>{
+        e.preventDefault()
+        emailjs.sendForm('service_hmsmugo','template_htnctlh',e.target,'iyNwT38vA4zpSYRnG')
+        .then(res=>{
+            console.log('success')
+            console.log(res)
+        }).catch(err=>{
+            console.log(err)
+        })
+    }
+
     return (
         <div>
             <div >
@@ -35,37 +47,40 @@ const Contact = () => {
                         </div>
                     </div>
                     <div class="text-center lg:text-left w-full max-w-[700px] ">
-                        <div className='grid md:grid-cols-2 sm:grid-cols-1 grid-cols-1 gap-4 w-full mb-4 '>
-                            <div>
-                                <input type="text" placeholder="First Name" class="input input-bordered w-full " />
+                        <form onSubmit={handleSubmit}>
+                            <div className='grid md:grid-cols-2 sm:grid-cols-1 grid-cols-1 gap-4 w-full mb-4 '>
+                                <div>
+                                    <input type="text" placeholder="First Name" class="input input-bordered w-full " name='fname' required/>
+                                </div>
+                                <div>
+                                    <input type="text" placeholder="Last Name" class="input input-bordered w-full" name='lname' required/>
+                                </div>
                             </div>
-                            <div>
-                                <input type="text" placeholder="Last Name" class="input input-bordered w-full" />
+                            <div className='grid md:grid-cols-2 sm:grid-cols-1 grid-cols-1 gap-4 w-full'>
+                                <div>
+                                    <input type="text" placeholder="Email" class="input input-bordered w-full " name='email' required/>
+                                </div>
+                                <div>
+                                    <input type="text" placeholder="Phone" class="input input-bordered w-full" required name='phone'/>
+                                </div>
                             </div>
-                        </div>
-                        <div className='grid md:grid-cols-2 sm:grid-cols-1 grid-cols-1 gap-4 w-full'>
-                            <div>
-                                <input type="text" placeholder="Email" class="input input-bordered w-full " />
+                            <div className='mt-4'>
+                                <textarea class="textarea w-full min-h-[120px] textarea-bordered h-24" placeholder="Bio" required name='message'></textarea>
                             </div>
-                            <div>
-                                <input type="text" placeholder="Phone" class="input input-bordered w-full" />
+                            <div className='flex justify-end mt-5 '>
+                                <button
+                                type='submit'
+                                    className='resume_btn font-bold rounded-full md:px-[14px] xl:px-[20px] px-[20px] py-[5px]'
+                                >
+                                    <span>
+                                        <PaperAirplaneIcon
+                                            className='w-[20px] rotate-45'
+                                        />
+                                    </span>
+                                    Send Us Message
+                                </button>
                             </div>
-                        </div>
-                        <div className='mt-4'>
-                            <textarea class="textarea w-full min-h-[120px] textarea-bordered h-24" placeholder="Bio"></textarea>
-                        </div>
-                        <div className='flex justify-end mt-5 '>
-                            <button
-                                className='resume_btn font-bold rounded-full md:px-[14px] xl:px-[20px] px-[20px] py-[5px]'
-                            >
-                                <span>
-                                    <PaperAirplaneIcon
-                                        className='w-[20px] rotate-45'
-                                    />
-                                </span>
-                                Send Us Message
-                            </button>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
