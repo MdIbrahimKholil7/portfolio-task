@@ -54,7 +54,7 @@ const AboutMe = () => {
                                 </div>
                             </div>
                             {/* description  */}
-                            <div className='mt-5 text-right px-5 text-black dark:text-white'>
+                            <div className='mt-5 text-right sm:px-5 px-2 text-black dark:text-white'>
                                 <div >
                                     <p className='uppercase font-bold my-3 text-black dark:text-white lg:text-xl md:text-[18px] text-[16px]'><span className='text-[#458fd0]'>Hello!</span> My Name is Ariful Islam</p>
                                     <article className='border_bottom pb-4 mb-3'>

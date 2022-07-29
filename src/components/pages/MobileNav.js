@@ -5,6 +5,7 @@ import { FaUserAlt } from 'react-icons/fa';
 import { BsFillGearFill } from 'react-icons/bs';
 import { FaMobile } from 'react-icons/fa';
 import { MenuAlt3Icon, XIcon } from '@heroicons/react/solid'
+import { HashLink } from 'react-router-hash-link';
 const MobileNav = () => {
     const [open, setOpen] = useState(true)
     const [rotate, setRotate] = useState(false)
@@ -74,31 +75,47 @@ const MobileNav = () => {
                     <motion.ul
                         variants={openVariants}
                         animate={openMenu ? 'openNav' : 'closeNav'}
-                        className=" h-[70vh] w-full z-[-777]  nav-bg py-20 dark:bg-slate-700" >
-                        <li className="flex  dark:text-white dark:border-b-white mt-5 pb-3 text-white font-bold text-[18px] li-style justify-center items-center">
-                            Home
-                            <span className="ml-2">
-                                <HiHome />
-                            </span>
-                        </li>
-                        <li className="flex dark:text-white dark:border-b-white mt-5 pb-3 text-white font-bold text-[18px] li-style justify-center items-center">
-                            About
-                            <span className="ml-2">
-                                <FaUserAlt />
-                            </span>
-                        </li>
-                        <li className="flex dark:text-white dark:border-b-white mt-5 pb-3 text-white font-bold text-[18px] li-style justify-center items-center">
-                            Services
-                            <span className="ml-2">
-                                <BsFillGearFill />
-                            </span>
-                        </li>
-                        <li className="flex dark:text-white dark:border-b-white mt-5 pb-3 text-white font-bold text-[18px] li-style justify-center items-center">
-                            Contact
-                            <span className="ml-2">
-                                <FaMobile />
-                            </span>
-                        </li>
+                        className=" h-[100vh] w-full z-[-777]  nav-bg py-20 dark:bg-slate-700" >
+                        <HashLink 
+                        smooth to='/'
+                        >
+                            <li className="flex  dark:text-white dark:border-b-white mt-5 pb-3 text-white font-bold text-[18px] li-style justify-center items-center">
+                                Home
+                                <span className="ml-2">
+                                    <HiHome />
+                                </span>
+                            </li>
+                        </HashLink>
+                        <HashLink
+                            smooth to='/#about'
+                        >
+                            <li className="flex dark:text-white dark:border-b-white mt-5 pb-3 text-white font-bold text-[18px] li-style justify-center items-center">
+                                About
+                                <span className="ml-2">
+                                    <FaUserAlt />
+                                </span>
+                            </li>
+                        </HashLink>
+                        <HashLink
+                            smooth to='/#service'
+                        >
+                            <li className="flex dark:text-white dark:border-b-white mt-5 pb-3 text-white font-bold text-[18px] li-style justify-center items-center">
+                                Services
+                                <span className="ml-2">
+                                    <BsFillGearFill />
+                                </span>
+                            </li>
+                        </HashLink>
+                        <HashLink
+                        smooth to='/#contact'
+                        >
+                            <li className="flex dark:text-white dark:border-b-white mt-5 pb-3 text-white font-bold text-[18px] li-style justify-center items-center">
+                                Contact
+                                <span className="ml-2">
+                                    <FaMobile />
+                                </span>
+                            </li>
+                        </HashLink>
                         <div className="text-center mt-5 text-white">
                             <label class="swap swap-rotate">
                                 <input onClick={() => themeHandler()} type="checkbox" />

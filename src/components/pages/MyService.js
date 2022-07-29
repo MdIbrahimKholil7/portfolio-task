@@ -49,7 +49,7 @@ const MyService = () => {
             if (cardView) {
                 serviceAnimation.start({
                     transition: {
-                        delay: 0.4,
+                        delay: 0.3,
                         duration: 1,
                         ease: 'easeInOut'
                     },
