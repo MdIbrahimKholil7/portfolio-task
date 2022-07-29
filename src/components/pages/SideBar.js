@@ -6,6 +6,7 @@ import { BsFillGearFill } from 'react-icons/bs';
 import { FaMobile } from 'react-icons/fa';
 import { BiChevronsLeft } from 'react-icons/bi';
 import { BiChevronsRight } from 'react-icons/bi';
+import { HashLink } from 'react-router-hash-link';
 import logo from '../../assets/img2.png'
 const sidebarVariants = {
     sidebarOpen: {
@@ -45,17 +46,17 @@ const LinkBoxVariants = {
     },
 };
 
-const imgVariants={
-    hidden:{
-        opacity:0,
-        pathLength:0
+const imgVariants = {
+    hidden: {
+        opacity: 0,
+        pathLength: 0
     },
-    visible:{
-        opacity:1,
-        pathLength:1,
-        transition:{
-            duration:1,
-            ease:'easeInOut'
+    visible: {
+        opacity: 1,
+        pathLength: 1,
+        transition: {
+            duration: 1,
+            ease: 'easeInOut'
         }
     }
 }
@@ -63,7 +64,7 @@ const imgVariants={
 
 // theme handler 
 
-const SideBar = ({progress,setProgress}) => {
+const SideBar = ({ progress, setProgress }) => {
     const [open, setOpen] = useState(true)
     const [rotate, setRotate] = useState(false)
     const [dark, setDark] = useState('light')
@@ -124,28 +125,44 @@ const SideBar = ({progress,setProgress}) => {
                         </div>
                         <div className="mt-7">
 
-                            <motion.img 
-                            variants={imgVariants}
-                            initial='hidden'
-                            animate='visible'
-                            className="w-[134px] border-solid border-[8px] border-[#458fd0] rounded-lg h-[134px] object-cover mx-auto" src={logo} alt="logo" />
+                            <motion.img
+                                variants={imgVariants}
+                                initial='hidden'
+                                animate='visible'
+                                className="w-[134px] border-solid border-[8px] border-[#458fd0] rounded-lg h-[134px] object-cover mx-auto" src={logo} alt="logo" />
 
                             <h1 className="uppercase text-center text-[#458fd0] text-xl font-sans font-bold my-5">Ariful Islam</h1>
                         </div>
                         <div className="px-16 mt-16">
                             <motion.ul className=" h-[100vh]" >
-                                <motion.li 
-                                whileHover={{scale:1.1,transition:{ ease:'easeInOut',type:'spring' , stiffness:320}}}
-                                className="flex dark:text-white dark:border-b-white mt-5 pb-3 text-[#212529] font-bold text-[18px] li-style justify-end items-center">Home <span className="ml-2"><HiHome /></span></motion.li>
-                                <motion.li
-                                whileHover={{scale:1.1,transition:{ ease:'easeInOut',type:'spring' , stiffness:320}}}
-                                className="flex dark:text-white dark:border-b-white mt-5 pb-3 text-[#212529] font-bold text-[18px] li-style justify-end items-center">About <span className="ml-2"><FaUserAlt /></span></motion.li>
-                                <motion.li
-                                whileHover={{scale:1.1,transition:{ ease:'easeInOut',type:'spring' , stiffness:320}}}
-                                className="flex dark:text-white dark:border-b-white mt-5 pb-3 text-[#212529] font-bold text-[18px] li-style justify-end items-center">Services<span className="ml-2"><BsFillGearFill /></span></motion.li>
-                                <motion.li
-                                whileHover={{scale:1.1,transition:{ ease:'easeInOut',type:'spring' , stiffness:320}}}
-                                className="flex dark:text-white dark:border-b-white mt-5 pb-3 text-[#212529] font-bold text-[18px] li-style justify-end items-center">Contact<span className="ml-2"><FaMobile /></span></motion.li>
+                                <HashLink
+                                    smooth to='/'
+                                >
+                                    <motion.li
+                                        whileHover={{ scale: 1.1, transition: { ease: 'easeInOut', type: 'spring', stiffness: 320 } }}
+                                        className="flex dark:text-white dark:border-b-white mt-5 pb-3 text-[#212529] font-bold text-[18px] li-style justify-end items-center">Home <span className="ml-2"><HiHome /></span></motion.li>
+                                </HashLink>
+                                <HashLink
+                                    smooth to='/#about'
+                                >
+                                    <motion.li
+                                        whileHover={{ scale: 1.1, transition: { ease: 'easeInOut', type: 'spring', stiffness: 320 } }}
+                                        className="flex dark:text-white dark:border-b-white mt-5 pb-3 text-[#212529] font-bold text-[18px] li-style justify-end items-center">About <span className="ml-2"><FaUserAlt /></span></motion.li>
+                                </HashLink>
+                                <HashLink
+                                    smooth to='/#service'
+                                >
+                                    <motion.li
+                                        whileHover={{ scale: 1.1, transition: { ease: 'easeInOut', type: 'spring', stiffness: 320 } }}
+                                        className="flex dark:text-white dark:border-b-white mt-5 pb-3 text-[#212529] font-bold text-[18px] li-style justify-end items-center">Services<span className="ml-2"><BsFillGearFill /></span></motion.li>
+                                </HashLink>
+                                <HashLink
+                                smooth to='/#contact'
+                                >
+                                    <motion.li
+                                        whileHover={{ scale: 1.1, transition: { ease: 'easeInOut', type: 'spring', stiffness: 320 } }}
+                                        className="flex dark:text-white dark:border-b-white mt-5 pb-3 text-[#212529] font-bold text-[18px] li-style justify-end items-center">Contact<span className="ml-2"><FaMobile /></span></motion.li>
+                                </HashLink>
                                 <div className="text-center mt-5">
                                     <label class="swap swap-rotate">
 

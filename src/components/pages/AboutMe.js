@@ -23,7 +23,7 @@ const AboutMe = () => {
         }
     }
     return (
-        <div className='max-w-[1386px] mx-auto'>
+        <div id='about' className='max-w-[1386px] mx-auto'>
             <div>
                 <motion.div 
                 variants={aboutVariants}

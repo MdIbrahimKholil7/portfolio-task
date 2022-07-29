@@ -53,6 +53,7 @@ const Contact = () => {
 
     return (
         <div 
+        id='contact'
         ref={ref}
         className='overflow-x-hidden'>
             <motion.div 

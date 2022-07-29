@@ -108,7 +108,10 @@ const MyService = () => {
     ]
 
     return (
-        <div ref={ref} className='services min-h-screen bg-red-400 mt-20 overflow-x-hidden' >
+        <div
+            id='service'
+            ref={ref}
+            className='services min-h-screen mt-20 overflow-x-hidden' >
             <motion.div
                 animate={animation}
             >
