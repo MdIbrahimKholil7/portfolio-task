@@ -35,10 +35,10 @@ const AboutMe = () => {
                     <h3 className='md:text-[18px] text-[15px] uppercase'> Introduction</h3>
                     <h1 className='lg:text-4xl md:text-3xl  text-2xl uppercase dark:text-[#458fd0] font-bold '>About <span className='text-[#458fd0] dark:text-white'>Me</span></h1>
                 </motion.div>
-                <div class="hero min-h-[80vh] lg:mt-20 ">
-                    <div class="hero-content items-start gap-7 lg:gap-6 xl:gap-40 flex-col justify-between w-full lg:flex-row-reverse">
+                <div className="hero min-h-[80vh] lg:mt-20 ">
+                    <div className="hero-content items-start gap-7 lg:gap-6 xl:gap-40 flex-col justify-between w-full lg:flex-row-reverse">
 
-                        <img src={img} class="lg:max-w-[317px]max-w-[300px] sm:max-w-[440px] h-auto lg:h-[346px] object-cover border-solid border-[8px] border-[#458fd0] rounded-lg  shadow-2xl mx-auto" alt='img' />
+                        <img src={img} className="lg:max-w-[317px]max-w-[300px] sm:max-w-[440px] h-auto lg:h-[346px] object-cover border-solid border-[8px] border-[#458fd0] rounded-lg  shadow-2xl mx-auto" alt='img' />
 
                         <div className='w-full text-white mt-9 lg:mt-0'>
                             <div className='w-full text-white '>

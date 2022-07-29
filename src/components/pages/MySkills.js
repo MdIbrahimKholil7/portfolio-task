@@ -50,57 +50,57 @@ const MySkills = ({ progress }) => {
                 </motion.div>
             </div>
             {
-                inView && <div class="container dark:bg-slate-800 mx-auto mb-[200]">
+                inView && <div className="container dark:bg-slate-800 mx-auto mb-[200]">
                     <div cla className='mb-7' ssName='mb-7'>
-                        <div class="progress md:w-[140px] md:h-[140px] w-[100px] h-[100px] text-[16px]  relative dark:bg-slate-800">
-                            <span class="title timer " data-from="0" data-to="95" data-speed="1800">90%</span>
-                            <div class={`${progress ? 'dark' : 'overlay'}`}></div>
-                            <div class="left"></div>
-                            <div class="right"></div>
+                        <div className="progress md:w-[140px] md:h-[140px] w-[100px] h-[100px] text-[16px]  relative dark:bg-slate-800">
+                            <span className="title timer " data-from="0" data-to="95" data-speed="1800">90%</span>
+                            <div className={`${progress ? 'dark' : 'overlay'}`}></div>
+                            <div className="left"></div>
+                            <div className="right"></div>
                         </div>
                         <div className='text-center font-bold'>
                             <h1 className='text-[#458fd0] text-[14px] md:text-[17px]'>HTML</h1>
                         </div>
                     </div>
                     <div className='mb-7'>
-                        <div class="progress md:w-[140px] md:h-[140px] w-[100px] h-[100px] text-[16px]  dark:bg-slate-800">
-                            <span class="title timer" data-from="0" data-to="80" data-speed="1500">80%</span>
-                            <div class={`${progress ? 'dark' : 'overlay'}`}></div>
-                            <div class="left"></div>
-                            <div class="right"></div>
+                        <div className="progress md:w-[140px] md:h-[140px] w-[100px] h-[100px] text-[16px]  dark:bg-slate-800">
+                            <span className="title timer" data-from="0" data-to="80" data-speed="1500">80%</span>
+                            <div className={`${progress ? 'dark' : 'overlay'}`}></div>
+                            <div className="left"></div>
+                            <div className="right"></div>
                         </div>
                         <div className='text-center font-bold'>
                             <h1 className='text-[#458fd0] text-[14px] md:text-[17px]'>CSS</h1>
                         </div>
                     </div>
                     <div className='mb-7'>
-                        <div class="progress md:w-[140px] md:h-[140px] w-[100px] h-[100px] text-[16px]  dark:bg-slate-800">
-                            <span class="title timer" data-from="0" data-to="80" data-speed="1500">80%</span>
-                            <div class={`${progress ? 'dark' : 'overlay'}`}></div>
-                            <div class="left"></div>
-                            <div class="right"></div>
+                        <div className="progress md:w-[140px] md:h-[140px] w-[100px] h-[100px] text-[16px]  dark:bg-slate-800">
+                            <span className="title timer" data-from="0" data-to="80" data-speed="1500">80%</span>
+                            <div className={`${progress ? 'dark' : 'overlay'}`}></div>
+                            <div className="left"></div>
+                            <div className="right"></div>
                         </div>
                         <div className='text-center font-bold'>
                             <h1 className='text-[#458fd0] text-[14px] md:text-[17px]'>Tailwind CSS</h1>
                         </div>
                     </div>
                     <div className='mb-7'>
-                        <div class="progress md:w-[140px] md:h-[140px] w-[100px] h-[100px] text-[16px]  dark:bg-slate-800">
-                            <span class="title timer" data-from="0" data-to="90" data-speed="1500">90%</span>
-                            <div class={`${progress ? 'dark' : 'overlay'}`}></div>
-                            <div class="left"></div>
-                            <div class="right"></div>
+                        <div className="progress md:w-[140px] md:h-[140px] w-[100px] h-[100px] text-[16px]  dark:bg-slate-800">
+                            <span className="title timer" data-from="0" data-to="90" data-speed="1500">90%</span>
+                            <div className={`${progress ? 'dark' : 'overlay'}`}></div>
+                            <div className="left"></div>
+                            <div className="right"></div>
                         </div>
                         <div className='text-center font-bold'>
                             <h1 className='text-[#458fd0] text-[14px] md:text-[17px]'>Bootstrap</h1>
                         </div>
                     </div>
                     <div className='mb-7'>
-                        <div class="progress md:w-[140px] md:h-[140px] w-[100px] h-[100px] text-[16px]  dark:bg-slate-800">
-                            <span class="title timer" data-from="0" data-to="50" data-speed="1500">50%</span>
-                            <div class={`${progress ? 'dark' : 'overlay'}`}></div>
-                            <div class="left"></div>
-                            <div class="right"></div>
+                        <div className="progress md:w-[140px] md:h-[140px] w-[100px] h-[100px] text-[16px]  dark:bg-slate-800">
+                            <span className="title timer" data-from="0" data-to="50" data-speed="1500">50%</span>
+                            <div className={`${progress ? 'dark' : 'overlay'}`}></div>
+                            <div className="left"></div>
+                            <div className="right"></div>
                         </div>
                         <div className='text-center font-bold'>
                             <h1 className='text-[#458fd0] text-[14px] md:text-[17px]'>JS</h1>
@@ -108,55 +108,55 @@ const MySkills = ({ progress }) => {
                     </div>
 
                     <div className='mb-7'>
-                        <div class="progress md:w-[140px] md:h-[140px] w-[100px] h-[100px] text-[16px]  dark:bg-slate-800">
-                            <span class="title timer" data-from="0" data-to="75" data-speed="1800">75%</span>
-                            <div class={`${progress ? 'dark' : 'overlay'}`}></div>
-                            <div class="left"></div>
-                            <div class="right"></div>
+                        <div className="progress md:w-[140px] md:h-[140px] w-[100px] h-[100px] text-[16px]  dark:bg-slate-800">
+                            <span className="title timer" data-from="0" data-to="75" data-speed="1800">75%</span>
+                            <div className={`${progress ? 'dark' : 'overlay'}`}></div>
+                            <div className="left"></div>
+                            <div className="right"></div>
                         </div>
                         <div className='text-center font-bold'>
                             <h1 className='text-[#458fd0] text-[14px] md:text-[17px]'>Firebase</h1>
                         </div>
                     </div>
                     <div className='mb-7'>
-                        <div class="progress md:w-[140px] md:h-[140px] w-[100px] h-[100px] text-[16px]  dark:bg-slate-800">
-                            <span class="title timer" data-from="0" data-to="70" data-speed="1800">70%</span>
-                            <div class={`${progress ? 'dark' : 'overlay'}`}></div>
-                            <div class="left"></div>
-                            <div class="right"></div>
+                        <div className="progress md:w-[140px] md:h-[140px] w-[100px] h-[100px] text-[16px]  dark:bg-slate-800">
+                            <span className="title timer" data-from="0" data-to="70" data-speed="1800">70%</span>
+                            <div className={`${progress ? 'dark' : 'overlay'}`}></div>
+                            <div className="left"></div>
+                            <div className="right"></div>
                         </div>
                         <div className='text-center font-bold'>
                             <h1 className='text-[#458fd0] text-[14px] md:text-[17px]'>React JS</h1>
                         </div>
                     </div>
                     <div className='mb-7'>
-                        <div class="progress md:w-[140px] md:h-[140px] w-[100px] h-[100px] text-[16px]  dark:bg-slate-800">
-                            <span class="title timer" data-from="0" data-to="45" data-speed="1800">45%</span>
-                            <div class={`${progress ? 'dark' : 'overlay'}`}></div>
-                            <div class="left"></div>
-                            <div class="right"></div>
+                        <div className="progress md:w-[140px] md:h-[140px] w-[100px] h-[100px] text-[16px]  dark:bg-slate-800">
+                            <span className="title timer" data-from="0" data-to="45" data-speed="1800">45%</span>
+                            <div className={`${progress ? 'dark' : 'overlay'}`}></div>
+                            <div className="left"></div>
+                            <div className="right"></div>
                         </div>
                         <div className='text-center font-bold'>
                             <h1 className='text-[#458fd0] text-[14px] md:text-[17px]'>Node JS</h1>
                         </div>
                     </div>
                     <div className='mb-7'>
-                        <div class="progress md:w-[140px] md:h-[140px] w-[100px] h-[100px] text-[16px]  dark:bg-slate-800">
-                            <span class="title timer" data-from="0" data-to="55" data-speed="1800">55%</span>
-                            <div class={`${progress ? 'dark' : 'overlay'}`}></div>
-                            <div class="left"></div>
-                            <div class="right"></div>
+                        <div className="progress md:w-[140px] md:h-[140px] w-[100px] h-[100px] text-[16px]  dark:bg-slate-800">
+                            <span className="title timer" data-from="0" data-to="55" data-speed="1800">55%</span>
+                            <div className={`${progress ? 'dark' : 'overlay'}`}></div>
+                            <div className="left"></div>
+                            <div className="right"></div>
                         </div>
                         <div className='text-center font-bold'>
                             <h1 className='text-[#458fd0] text-[14px] md:text-[17px]'>MongoDB</h1>
                         </div>
                     </div>
                     <div className='mb-7'>
-                        <div class="progress md:w-[140px] md:h-[140px] w-[100px] h-[100px] text-[16px]  dark:bg-slate-800">
-                            <span class="title timer" data-from="0" data-to="40" data-speed="1800">40%</span>
-                            <div class={`${progress ? 'dark' : 'overlay'}`}></div>
-                            <div class="left"></div>
-                            <div class="right"></div>
+                        <div className="progress md:w-[140px] md:h-[140px] w-[100px] h-[100px] text-[16px]  dark:bg-slate-800">
+                            <span className="title timer" data-from="0" data-to="40" data-speed="1800">40%</span>
+                            <div className={`${progress ? 'dark' : 'overlay'}`}></div>
+                            <div className="left"></div>
+                            <div className="right"></div>
                         </div>
                         <div className='text-center font-bold'>
                             <h1 className='text-[#458fd0] text-[14px] md:text-[17px]'>Express JS</h1>

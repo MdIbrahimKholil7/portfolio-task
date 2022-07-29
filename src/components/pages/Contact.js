@@ -65,10 +65,10 @@ const Contact = () => {
                     <h1 className='lg:text-4xl md:text-3xl  text-2xl uppercase dark:text-[#458fd0] font-bold '>Get In <span className='text-[#458fd0] dark:text-white'>Touch</span></h1>
                 </div>
             </motion.div>
-            <div class="hero z-20 min-h-[80vh] ">
-                <div class="hero-content flex-col lg:flex-row-reverse w-full">
-                    <div class="flex-shrink-0 w-full max-w-sm ">
-                        <div class="flex justify-center">
+            <div className="hero z-20 min-h-[80vh] ">
+                <div className="hero-content flex-col lg:flex-row-reverse w-full">
+                    <div className="flex-shrink-0 w-full max-w-sm ">
+                        <div className="flex justify-center">
                             <div className='text-right text-black dark:text-white'>
                                 <div className='mb-2'>
                                     <strong>Email</strong>
@@ -89,26 +89,26 @@ const Contact = () => {
                             </div>
                         </div>
                     </div>
-                    <div class="text-center lg:text-left w-full max-w-[700px] ">
+                    <div className="text-center lg:text-left w-full max-w-[700px] ">
                         <form onSubmit={handleSubmit}>
                             <div className='grid md:grid-cols-2 sm:grid-cols-1 grid-cols-1 gap-4 w-full mb-4 '>
                                 <div>
-                                    <input type="text" placeholder="First Name" class="input input-bordered w-full " name='fname' required/>
+                                    <input type="text" placeholder="First Name" className="input input-bordered w-full " name='fname' required/>
                                 </div>
                                 <div>
-                                    <input type="text" placeholder="Last Name" class="input input-bordered w-full" name='lname' required/>
+                                    <input type="text" placeholder="Last Name" className="input input-bordered w-full" name='lname' required/>
                                 </div>
                             </div>
                             <div className='grid md:grid-cols-2 sm:grid-cols-1 grid-cols-1 gap-4 w-full'>
                                 <div>
-                                    <input type="email" placeholder="Email" class="input input-bordered w-full " name='email' required/>
+                                    <input type="email" placeholder="Email" className="input input-bordered w-full " name='email' required/>
                                 </div>
                                 <div>
-                                    <input type="number" placeholder="Phone" class="input input-bordered w-full" required name='phone'/>
+                                    <input type="number" placeholder="Phone" className="input input-bordered w-full" required name='phone'/>
                                 </div>
                             </div>
                             <div className='mt-4'>
-                                <textarea class="textarea w-full min-h-[120px] textarea-bordered h-24" placeholder="Bio" required name='message'></textarea>
+                                <textarea className="textarea w-full min-h-[120px] textarea-bordered h-24" placeholder="Bio" required name='message'></textarea>
                             </div>
                             <div className='flex justify-center sm:justify-end mt-5 '>
                                 <button
