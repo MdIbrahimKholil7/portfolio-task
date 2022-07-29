@@ -45,9 +45,25 @@ const LinkBoxVariants = {
     },
 };
 
+const imgVariants={
+    hidden:{
+        opacity:0,
+        pathLength:0
+    },
+    visible:{
+        opacity:1,
+        pathLength:1,
+        transition:{
+            duration:1,
+            ease:'easeInOut'
+        }
+    }
+}
+
+
 // theme handler 
 
-const SideBar = () => {
+const SideBar = ({progress,setProgress}) => {
     const [open, setOpen] = useState(true)
     const [rotate, setRotate] = useState(false)
     const [dark, setDark] = useState('light')
@@ -60,6 +76,7 @@ const SideBar = () => {
         setOpen(!open)
     }
     const themeHandler = () => {
+        setProgress(!progress)
         if (dark === 'light') {
             setDark('dark')
         } else {
@@ -106,15 +123,29 @@ const SideBar = () => {
                             </h4>
                         </div>
                         <div className="mt-7">
-                            <img className="w-[134px] border-solid border-[8px] border-[#458fd0] rounded-lg h-[134px] object-cover mx-auto" src={logo} alt="logo" />
+
+                            <motion.img 
+                            variants={imgVariants}
+                            initial='hidden'
+                            animate='visible'
+                            className="w-[134px] border-solid border-[8px] border-[#458fd0] rounded-lg h-[134px] object-cover mx-auto" src={logo} alt="logo" />
+
                             <h1 className="uppercase text-center text-[#458fd0] text-xl font-sans font-bold my-5">Ariful Islam</h1>
                         </div>
                         <div className="px-16 mt-16">
                             <motion.ul className=" h-[100vh]" >
-                                <li className="flex dark:text-white dark:border-b-white mt-5 pb-3 text-[#212529] font-bold text-[18px] li-style justify-end items-center">Home <span className="ml-2"><HiHome /></span></li>
-                                <li className="flex dark:text-white dark:border-b-white mt-5 pb-3 text-[#212529] font-bold text-[18px] li-style justify-end items-center">About <span className="ml-2"><FaUserAlt /></span></li>
-                                <li className="flex dark:text-white dark:border-b-white mt-5 pb-3 text-[#212529] font-bold text-[18px] li-style justify-end items-center">Services<span className="ml-2"><BsFillGearFill /></span></li>
-                                <li className="flex dark:text-white dark:border-b-white mt-5 pb-3 text-[#212529] font-bold text-[18px] li-style justify-end items-center">Contact<span className="ml-2"><FaMobile /></span></li>
+                                <motion.li 
+                                whileHover={{scale:1.1,transition:{ ease:'easeInOut',type:'spring' , stiffness:320}}}
+                                className="flex dark:text-white dark:border-b-white mt-5 pb-3 text-[#212529] font-bold text-[18px] li-style justify-end items-center">Home <span className="ml-2"><HiHome /></span></motion.li>
+                                <motion.li
+                                whileHover={{scale:1.1,transition:{ ease:'easeInOut',type:'spring' , stiffness:320}}}
+                                className="flex dark:text-white dark:border-b-white mt-5 pb-3 text-[#212529] font-bold text-[18px] li-style justify-end items-center">About <span className="ml-2"><FaUserAlt /></span></motion.li>
+                                <motion.li
+                                whileHover={{scale:1.1,transition:{ ease:'easeInOut',type:'spring' , stiffness:320}}}
+                                className="flex dark:text-white dark:border-b-white mt-5 pb-3 text-[#212529] font-bold text-[18px] li-style justify-end items-center">Services<span className="ml-2"><BsFillGearFill /></span></motion.li>
+                                <motion.li
+                                whileHover={{scale:1.1,transition:{ ease:'easeInOut',type:'spring' , stiffness:320}}}
+                                className="flex dark:text-white dark:border-b-white mt-5 pb-3 text-[#212529] font-bold text-[18px] li-style justify-end items-center">Contact<span className="ml-2"><FaMobile /></span></motion.li>
                                 <div className="text-center mt-5">
                                     <label class="swap swap-rotate">
 

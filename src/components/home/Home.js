@@ -5,11 +5,12 @@ import Footer from '../pages/Footer';
 import MobileNav from '../pages/MobileNav';
 import MyProject from '../pages/MyProject';
 import MyService from '../pages/MyService';
+import MySkills from '../pages/MySkills';
 import ProductTestimonial from '../pages/ProductTestimonial';
 import SideBar from '../pages/SideBar';
 import Testimonials from '../pages/Testimonials';
 const Home = () => {
-
+    const [progress,setProgress]=useState(false)
     return (
         <div >
             <div>
@@ -20,12 +21,18 @@ const Home = () => {
                     <AboutMe />
                     <MyService />
                     <MyProject />
+                    <MySkills
+                    progress={progress}
+                    />
                     <Testimonials />
                     <Contact />
                     {/* <ProductTestimonial/> */}
                     <Footer/>
                 </div>
-                <SideBar />
+                <SideBar 
+                progress={progress}
+                setProgress={setProgress}
+                />
 
             </div>
         </div>

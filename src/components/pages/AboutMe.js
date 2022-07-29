@@ -1,14 +1,40 @@
 import { ChevronLeftIcon, DocumentIcon } from '@heroicons/react/solid';
 import React from 'react';
 import img from '../../assets/img3.jpg'
+import {motion} from 'framer-motion'
 const AboutMe = () => {
+
+    const aboutVariants={
+        visible:{
+            y:0,
+            transition:{
+                delay:0.6,
+                type:'spring',
+                stiffness:60,
+                duration:.3,
+                ease:'easeInOut'
+
+            },
+            opacity:1
+        },
+        hidden:{
+            y:-1000,
+            opacity:0
+        }
+    }
     return (
         <div className='max-w-[1386px] mx-auto'>
             <div>
-                <div className='text-center mt-20 inline-block w-full bottom-border relative mb-10 lg:mb-0'>
+                <motion.div 
+                variants={aboutVariants}
+                initial='hidden'
+                animate='visible'
+                className='text-center mt-20 inline-block w-full bottom-border relative mb-10 lg:mb-0'
+                
+                >
                     <h3 className='md:text-[18px] text-[15px] uppercase'> Introduction</h3>
                     <h1 className='lg:text-4xl md:text-3xl  text-2xl uppercase dark:text-[#458fd0] font-bold '>About <span className='text-[#458fd0] dark:text-white'>Me</span></h1>
-                </div>
+                </motion.div>
                 <div class="hero min-h-[80vh] lg:mt-20 ">
                     <div class="hero-content items-start gap-7 lg:gap-6 xl:gap-40 flex-col justify-between w-full lg:flex-row-reverse">
 

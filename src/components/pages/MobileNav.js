@@ -74,7 +74,7 @@ const MobileNav = () => {
                     <motion.ul
                         variants={openVariants}
                         animate={openMenu ? 'openNav' : 'closeNav'}
-                        className=" h-[70vh] w-full z-[-777]  nav-bg py-20" >
+                        className=" h-[70vh] w-full z-[-777]  nav-bg py-20 dark:bg-slate-700" >
                         <li className="flex  dark:text-white dark:border-b-white mt-5 pb-3 text-white font-bold text-[18px] li-style justify-center items-center">
                             Home
                             <span className="ml-2">

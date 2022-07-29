@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-
+import { motion,useAnimation } from 'framer-motion'
+import { useInView } from 'react-intersection-observer';
 const MyServiceCard = ({ service }) => {
-
+   
     const { title, img, serviceDesc } = service
     const [desc, setDesc] = useState('')
     const [open, setOpen] = useState(false)
@@ -23,9 +24,10 @@ const MyServiceCard = ({ service }) => {
     const btn = <button className='text-[#458fd0] hover:text-white' onClick={handleDesc}>... See more</button>
     const showMoreBtn = details.length > 69 && btn
 
-
     return (
-        <div
+        <motion.div
+    
+            layout
             className='flex justify-center items-start card-hover relative'
         >
             <div className=''>
@@ -65,7 +67,7 @@ const MyServiceCard = ({ service }) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 
