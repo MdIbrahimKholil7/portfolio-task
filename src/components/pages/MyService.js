@@ -38,32 +38,7 @@ const MyService = () => {
         }
     }, [inView])
 
-    const { ref: cardRef, inView: cardView } = useInView({
-        threshold: 0.3
-    })
-    const serviceAnimation = useAnimation()
-    const [cardCount, setCardCount] = useState(0)
-    useEffect(() => {
-        setCardCount(cardCount + 1)
-        if (cardCount <= 1) {
-            if (cardView) {
-                serviceAnimation.start({
-                    transition: {
-                        delay: 0.3,
-                        duration: 1,
-                        ease: 'easeInOut'
-                    },
-                    opacity: 1
-                })
-            }
-            if (!cardView) {
-                serviceAnimation.start({
-                    opacity: 0
-                })
-            }
-        }
-    }, [cardView])
-
+   
     const services = [
         {
             title: 'Coding',
@@ -124,8 +99,7 @@ const MyService = () => {
             </motion.div>
 
             <motion.div
-                ref={cardRef}
-                animate={serviceAnimation}
+                
                 className='max-w-[1008px] mx-auto '>
                 <div
                     className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:gap-4 md:gap-6 gap-3 px-5 lg:py-20 py-10'

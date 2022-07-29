@@ -1,3 +1,7 @@
+html{
+  scroll-behavior: smooth;
+}
+
 .sidebar {
   background-color: #fff;
   box-shadow: -12px 0 8px rgb(0 0 0 / 10%)

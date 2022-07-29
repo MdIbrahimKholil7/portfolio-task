@@ -67,7 +67,6 @@ const imgVariants = {
 const SideBar = ({ progress, setProgress }) => {
     const [open, setOpen] = useState(true)
     const theme=JSON.parse(localStorage.getItem('theme'))
-    console.log(theme)
     const [rotate, setRotate] = useState(false)
     const [dark, setDark] = useState(theme?.theme || 'light')
     useEffect(() => {

@@ -55,7 +55,7 @@ const Contact = () => {
         <div 
         id='contact'
         ref={ref}
-        className='overflow-x-hidden'>
+        className='overflow-x-hidden pb-16'>
             <motion.div 
             
             animate={animation}
@@ -110,7 +110,7 @@ const Contact = () => {
                             <div className='mt-4'>
                                 <textarea class="textarea w-full min-h-[120px] textarea-bordered h-24" placeholder="Bio" required name='message'></textarea>
                             </div>
-                            <div className='flex justify-end mt-5 '>
+                            <div className='flex justify-center sm:justify-end mt-5 '>
                                 <button
                                 type='submit'
                                     className='resume_btn font-bold rounded-full md:px-[14px] xl:px-[20px] px-[20px] py-[5px]'
