@@ -1,36 +1,37 @@
 import { ChevronLeftIcon, DocumentIcon } from '@heroicons/react/solid';
 import React from 'react';
 import img from '../../assets/img3.jpg'
-import {motion} from 'framer-motion'
+import { motion } from 'framer-motion'
+import { HashLink } from 'react-router-hash-link';
 const AboutMe = () => {
 
-    const aboutVariants={
-        visible:{
-            y:0,
-            transition:{
-                delay:0.6,
-                type:'spring',
-                stiffness:60,
-                duration:.3,
-                ease:'easeInOut'
+    const aboutVariants = {
+        visible: {
+            y: 0,
+            transition: {
+                delay: 0.6,
+                type: 'spring',
+                stiffness: 60,
+                duration: .3,
+                ease: 'easeInOut'
 
             },
-            opacity:1
+            opacity: 1
         },
-        hidden:{
-            y:-1000,
-            opacity:0
+        hidden: {
+            y: -1000,
+            opacity: 0
         }
     }
     return (
         <div id='about' className='max-w-[1386px] mx-auto'>
             <div>
-                <motion.div 
-                variants={aboutVariants}
-                initial='hidden'
-                animate='visible'
-                className='text-center mt-20 inline-block w-full bottom-border relative mb-10 lg:mb-0'
-                
+                <motion.div
+                    variants={aboutVariants}
+                    initial='hidden'
+                    animate='visible'
+                    className='text-center mt-20 inline-block w-full bottom-border relative mb-10 lg:mb-0'
+
                 >
                     <h3 className='md:text-[18px] text-[15px] uppercase'> Introduction</h3>
                     <h1 className='lg:text-4xl md:text-3xl  text-2xl uppercase dark:text-[#458fd0] font-bold '>About <span className='text-[#458fd0] dark:text-white'>Me</span></h1>
@@ -93,16 +94,20 @@ const AboutMe = () => {
                                         </div>
                                     </div>
                                     <div className='flex items-center justify-center md:flex-row flex-col mt-8'>
-                                        <button
-                                            className='hire_btn rounded-full uppercase font-bold inline-block md:mr-7 mb-5 md:mb-0 md:px-[14px] xl:px-[20px] px-[20px] py-[5px]'
+                                        <HashLink
+                                        smooth to='/#contact'
                                         >
-                                            <span>
-                                                <ChevronLeftIcon
-                                                    className='w-[20px]'
-                                                />
-                                            </span>
-                                            Hire Me
-                                        </button>
+                                            <button
+                                                className='hire_btn rounded-full uppercase font-bold inline-block md:mr-7 mb-5 md:mb-0 md:px-[14px] xl:px-[20px] px-[20px] py-[5px]'
+                                            >
+                                                <span>
+                                                    <ChevronLeftIcon
+                                                        className='w-[20px]'
+                                                    />
+                                                </span>
+                                                Hire Me
+                                            </button>
+                                        </HashLink>
                                         <button
                                             className='resume_btn font-bold rounded-full md:px-[14px] xl:px-[20px] px-[20px] py-[5px]'
                                         >

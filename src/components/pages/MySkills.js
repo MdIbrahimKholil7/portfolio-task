@@ -46,7 +46,7 @@ const MySkills = ({ progress }) => {
                 className='text-center mt-20 inline-block w-full bottom-border relative mb-10 '>
                     <h3 className='md:text-[18px] dark:text-white text-[15px] uppercase'> Skills</h3>
                     <h1 className='lg:text-4xl md:text-3xl  text-2xl uppercase dark:text-[#458fd0] font-bold  '>My <span className='text-[#458fd0] dark:text-white'>Skills</span></h1>
-
+                    
                 </motion.div>
             </div>
             {

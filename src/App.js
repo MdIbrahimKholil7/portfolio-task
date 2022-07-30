@@ -3,6 +3,7 @@ import './App.css';
 import { Routes, Route } from 'react-router-dom'
 // import Home from './components/home/Home';
 import loader from './assets/829.gif'
+import NotFound from './components/pages/NotFound';
 function App() {
   const Home = React.lazy(() => import('./components/home/Home'));
 
@@ -21,6 +22,7 @@ function App() {
           >
             <Home />
           </Suspense>} />
+          <Route path='*' element={<NotFound/>}/>
       </Routes>
     </div>
   );
